@@ -1,0 +1,24 @@
+﻿Compilación iniciada a las 05/10/2015 16:39:37.
+     1>Proyecto "D:\Users\asierig\Desktop\Clase Punt\Clase Punt\Clase Punt.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Point.cpp Source.cpp
+         Source.cpp
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(14): warning C4553: '==' : el operador no tiene efecto; ¿ha pensado en '='?
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(15): warning C4553: '==' : el operador no tiene efecto; ¿ha pensado en '='?
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(18): warning C4552: '!=' : el operador no tiene efecto; se esperaba un operador con efecto secundario
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(19): warning C4552: '!=' : el operador no tiene efecto; se esperaba un operador con efecto secundario
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(30): warning C4552: '+' : el operador no tiene efecto; se esperaba un operador con efecto secundario
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(31): warning C4552: '+' : el operador no tiene efecto; se esperaba un operador con efecto secundario
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(34): warning C4552: '-' : el operador no tiene efecto; se esperaba un operador con efecto secundario
+     1>d:\users\asierig\desktop\clase punt\clase punt\point.h(35): warning C4552: '-' : el operador no tiene efecto; se esperaba un operador con efecto secundario
+         Point.cpp
+         Generando código...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\asierig\Desktop\Clase Punt\Debug\Clase Punt.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\asierig\Desktop\Clase Punt\Debug\Clase Punt.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\asierig\Desktop\Clase Punt\Debug\Clase Punt.lib" /MACHINE:X86 Debug\Point.obj
+         Debug\Source.obj
+         Clase Punt.vcxproj -> D:\Users\asierig\Desktop\Clase Punt\Debug\Clase Punt.exe
+     1>Compilación del proyecto terminada "D:\Users\asierig\Desktop\Clase Punt\Clase Punt\Clase Punt.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:01.52

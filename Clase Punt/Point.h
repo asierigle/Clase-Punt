@@ -5,18 +5,26 @@ class Point
 {
 public:
 	int x, y;
-
-		Point operator = (Point a);
-		bool operator == (Point a);
-		bool operator != (Point a);
-		Point operator += (Point a);
-		Point operator -= (Point a);
-		Point operator + (Point a);
-		Point operator - (Point a);
-		Point IsZero();
-		Point SetZero();
+	Point();
+	Point(){
+		Point p(10, 10);
+	}
+	Point(){
+		
+	}
+		const Point& operator = (const Point& a);
+		bool operator == (const Point& a)const;
+		bool operator != (const Point& a)const;
+		const Point& operator += (const Point& a);
+		const Point& operator -= (const Point& a);
+		Point operator + (const Point& a)const;
+		Point operator - (const Point& a)const;
+		bool IsZero()const;
+		void SetZero();
 		Point Negate();
+	~Point();
 private:
 
 };
+
 

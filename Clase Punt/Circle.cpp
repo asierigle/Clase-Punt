@@ -36,6 +36,6 @@ Circle Circle::operator - (const Circle& a)const{
 	return tmp;
 
 }
-int GetArea(const Circle& a){
+float GetArea(const Circle& a){
 	return (3.14f * a.r);
 }

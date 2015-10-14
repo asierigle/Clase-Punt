@@ -1,17 +1,19 @@
 #include <math.h>
 
 
+
 class Point
 {
 public:
 	int x, y;
-	Point();
-	Point(){
+	char* characters;
+	Point(int i){
+		x = 0, y = 0, characters = new char[i]; 
+	}
+	/*Point(){
 		Point p(10, 10);
-	}
-	Point(){
-		
-	}
+	}*/
+	
 		const Point& operator = (const Point& a);
 		bool operator == (const Point& a)const;
 		bool operator != (const Point& a)const;
@@ -22,9 +24,23 @@ public:
 		bool IsZero()const;
 		void SetZero();
 		Point Negate();
-	~Point();
+		virtual ~Point(){ delete[] characters; };
 private:
 
 };
+class Deriv : public Point
+{
+public:
+	int* numbers;
+	Deriv(int i) : Point(i)
+	{
+		numbers = new int[i];	
+	}
+	~Deriv(){
+		delete[] numbers;
+	}
 
+private:
+
+};
 

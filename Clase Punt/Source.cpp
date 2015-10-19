@@ -25,10 +25,20 @@ void Swap(int* node5, int* node6)
 	*node5 = *node6;
 	*node6 = a;
 }
+class A
+{
+public:
+	A(int n) :num(n){}
+	int num;
+
+
+private:
+
+};
 
 
 int main(int argc, char** argv){
-	int a = 2;
+	/*int a = 2;
 	int b = 4;
 	char* c = "hola";
 	char* d = "adeu";
@@ -36,10 +46,11 @@ int main(int argc, char** argv){
 	float f = 8.4f;
 	Point* w = new Deriv(10);
 	delete w;
-	/*int a = 1;
-	if (++a || a) printf("%d", a++);*/
 	Swap(&a,&b);
 	Swapc(c,d);
-	Swapf(&e,&f);
+	Swapf(&e,&f);*/
+	A a1(5);
+	A b1(a1);
+	A* pclass = new A(5);
 	getchar();
 }

@@ -65,11 +65,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="p2String.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="p2String.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="PruebaInclude.h" />
   </ItemGroup>

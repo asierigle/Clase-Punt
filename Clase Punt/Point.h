@@ -36,21 +36,18 @@ public:
 			y -= a.y;
 			return *this;
 		}
-		/*Point Point::operator + (const Point& a)const{
+		Point Point<TYPE>::operator + (const Point<TYPE>& a)const{
 		Point tmp;
 		tmp.x = x + a.x;
 		tmp.y = y + a.y;
 		return tmp;
 		}
-		Point Point::operator + (Point 4){
-
-		}
-		Point Point::operator - (const Point& a)const{
+		Point Point<TYPE>::operator - (const Point<TYPE>& a)const{
 		Point tmp;
 		tmp.x = x - a.x;
 		tmp.y = y - a.y;
 		return tmp;
-		}*/
+		}
 		bool Point<TYPE>::IsZero()const{
 			return (x == 0 && y == 0) ? true : false;
 		}

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Point.h"
 #include "Circle.h"
-
+#include "p2String.h"
 
 
 /*class A
@@ -24,7 +24,10 @@ void Swap(TYPE& b, TYPE& c)
 }
 
 int main(int argc, char** argv){
-	int e = 3;
+
+
+
+	/*int e = 3;
 	int w = 5;
 #include "PruebaInclude.h"
 #include "PruebaInclude.h"
@@ -33,9 +36,7 @@ int main(int argc, char** argv){
 	iPoint f = 5;
 	iPoint g = 5;
 
-	Swap(f, g);
-	
-	
+	Swap(f, g);*/
 	/*Point* w = new Deriv(10);
 	delete w;*/
 	/*A a1(5);

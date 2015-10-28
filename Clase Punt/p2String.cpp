@@ -3,10 +3,11 @@
 
 p2String::p2String(const p2String& s){
 
+
 }
 p2String::p2String(const char* string){
 	if (string != NULL){
-		int size = GetSize(string);
+		uint size = GetSize(string);
 		if (size > 0){
 			size += 1;
 			str = new char[size];
@@ -21,7 +22,7 @@ p2String::p2String(const char* string){
 	}
 }
 
-p2String::p2String(unsigned int scapacity){
+p2String::p2String(uint scapacity){
 	if (scapacity > 0){
 		str = new char[scapacity];
 		capacity = scapacity;
@@ -30,18 +31,27 @@ p2String::p2String(unsigned int scapacity){
 		printf("error");
 	}
 }
+p2String::~p2String(){
+	if (str != NULL){
+		delete[] str;
+	}
+}
+
+const char* p2String::c_str()const{
+	if(str != NULL){
+		return str;
+	}
+}
 
 int p2String::GetSize(const char* string)const
 {
-	int size = 0;
+	uint size = 0;
 
 	if (string != NULL){
 
 		const char* tmp = string;
-
-
-		for (tmp; *tmp != '\0'; tmp++)
-		{
+		
+		for (tmp; *tmp != '\0'; tmp++){
 			size++;
 		}
 	}

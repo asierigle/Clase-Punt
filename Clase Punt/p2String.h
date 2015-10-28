@@ -1,29 +1,29 @@
-#include <string.h>
-
 #ifndef __P2STRING_H__
 #define __P2STRING_H__	
 
 class p2String
 {
 public:
-	p2String(){
-		str = NULL;
-		capacity = 0;
-	}
-	p2String(unsigned int);
+	//Constructors and destructors
+	//p2String() :str(NULL), capacity(0){}
+	p2String(uint);
 	p2String(const char*);
 	p2String(const p2String&);
-	int GetSize(const char*)const;
-	~p2String(){
-		delete str;
-	}
+	~p2String(){}
 
+	//Methods
+	int GetSize(const char*)const;
+	const char* c_str()const;
+
+	//Operators
+	bool operator == (const char&)const;
+	bool operator!=(const char&)const;
 
 
 private:
-	char* str;
-	unsigned int capacity;
+	char* str = NULL;
+	uint capacity = 0;
 };
-
+typedef unsigned int uint
 
 #endif // !__P2STRING_H__

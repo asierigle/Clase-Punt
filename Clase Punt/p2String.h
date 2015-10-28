@@ -6,8 +6,11 @@
 class p2String
 {
 public:
-	p2String(){}
-	p2String(unsigned int scapacity);
+	p2String(){
+		str = NULL;
+		capacity = 0;
+	}
+	p2String(unsigned int);
 	p2String(const char*);
 	p2String(const p2String&);
 	int GetSize(const char*)const;

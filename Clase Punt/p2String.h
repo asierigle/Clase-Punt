@@ -6,25 +6,21 @@
 class p2String
 {
 public:
-	p2String(){};
+	p2String(){}
+	p2String(unsigned int scapacity);
+	p2String(const char*);
 	p2String(const p2String&);
-	p2String(char*);
-	p2String(uint);
+	int GetSize(const char*)const;
+	~p2String(){
+		delete str;
+	}
 
-
-	~p2String();
 
 
 private:
 	char* str;
-	uint capacity;
+	unsigned int capacity;
 };
-typedef unsigned int uint;
-p2String::p2String()
-{
-}
 
-p2String::~p2String()
-{
-}
+
 #endif // !__P2STRING_H__

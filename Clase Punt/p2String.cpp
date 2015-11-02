@@ -7,7 +7,7 @@ p2String::p2String(const p2String& s){
 }
 p2String::p2String(const char* string){
 	if (string != NULL){
-		uint size = GetSize(string);
+		unsigned int size = GetSize(string);
 		if (size > 0){
 			size += 1;
 			str = new char[size];
@@ -22,7 +22,7 @@ p2String::p2String(const char* string){
 	}
 }
 
-p2String::p2String(uint scapacity){
+p2String::p2String(unsigned int scapacity){
 	if (scapacity > 0){
 		str = new char[scapacity];
 		capacity = scapacity;
@@ -36,7 +36,7 @@ p2String::~p2String(){
 		delete[] str;
 	}
 }
-
+//Methods
 const char* p2String::c_str()const{
 	if(str != NULL){
 		return str;
@@ -45,7 +45,7 @@ const char* p2String::c_str()const{
 
 int p2String::GetSize(const char* string)const
 {
-	uint size = 0;
+	unsigned int size = 0;
 
 	if (string != NULL){
 
@@ -56,4 +56,36 @@ int p2String::GetSize(const char* string)const
 		}
 	}
 	return size;
+}
+//Operators
+bool p2String::operator == (const p2String& string)const{
+	return strcmp(this->str, string.str) == 0;
+}
+
+bool p2String::operator != (const p2String& string)const{
+	return strcmp(this->str, string.str) != 0;
+}
+
+const p2String& p2String::operator = (const p2String& string){
+	unsigned int size = GetSize(string.str);
+	if (size > capacity){
+		delete[] str;
+		capacity = size;
+		str = new char[size];
+	}
+	strcpy_s(str, size, string.str);
+	return (*this);
+}
+
+const p2String& p2String::operator += (const p2String& string){
+	unsigned int size = GetSize(string.str);
+	char* tmp = new char[size + capacity + 1];
+	strcpy_s(tmp, size + capacity + 1, str);
+	delete[] str;
+	
+	strcat_s(str, capacity + size + 1, string.str);
+	str = tmp;
+	return(*this);
+
+
 }

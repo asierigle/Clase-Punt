@@ -25,8 +25,10 @@ void Swap(TYPE& b, TYPE& c)
 
 int main(int argc, char** argv){
 
-
-
+	p2String Hola("Hola");
+	p2String Adeu("Adeu");
+	Hola += Adeu;
+	printf("%s", Hola.c_str());
 	/*int e = 3;
 	int w = 5;
 #include "PruebaInclude.h"

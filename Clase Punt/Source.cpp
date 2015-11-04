@@ -1,7 +1,4 @@
-#include <iostream>
-#include "Point.h"
-#include "Circle.h"
-#include "p2String.h"
+
 
 
 /*class A
@@ -14,22 +11,29 @@ public:
 private:
 
 };*/
-template<class TYPE>
+/*template<class TYPE>
 void Swap(TYPE& b, TYPE& c)
 {
 	TYPE a;
 	a = b;
 	b = c;
 	c = a;
-}
+}*/
 
 int main(int argc, char** argv){
 
-	p2String Hola("Hola");
+	/*p2String Hola("Hola");
 	p2String Adeu("Adeu");
 	Hola += Adeu;
 	printf("%s", Hola.c_str());
-	/*int e = 3;
+
+	int i = 5;
+	int* data = new int[i];
+	int* data2 = new int[i + i];
+	memcpy(data2, data, sizeof(data));
+
+	
+	int e = 3;
 	int w = 5;
 #include "PruebaInclude.h"
 #include "PruebaInclude.h"
@@ -43,6 +47,7 @@ int main(int argc, char** argv){
 	delete w;*/
 	/*A a1(5);
 	A b1(a1);
-	A* pclass = new A(5);*/
-	getchar();
+	A* pclass = new A(5);
+	delete[] data;
+	getchar();*/
 }

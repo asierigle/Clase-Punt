@@ -1,5 +1,6 @@
 #ifndef __P2STRING_H__
 #define __P2STRING_H__	
+#include "p2Defs.h"
 
 
 class p2String
@@ -7,7 +8,7 @@ class p2String
 public:
 	//Constructors and destructors
 	//p2String() :str(NULL), capacity(0){}
-	p2String(unsigned int);
+	p2String(uint);
 	p2String(const char*);
 	p2String(const p2String&);
 	~p2String();
@@ -25,7 +26,7 @@ public:
 
 private:
 	char* str = NULL;
-	unsigned int capacity = 0;
+	uint capacity = 0;
 };
 
 #endif // !__P2STRING_H__

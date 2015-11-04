@@ -1,13 +1,14 @@
 #include <iostream>
 #include "p2String.h"
 
+
 p2String::p2String(const p2String& s){
 
 
 }
 p2String::p2String(const char* string){
 	if (string != NULL){
-		unsigned int size = GetSize(string);
+		uint size = GetSize(string);
 		if (size > 0){
 			size += 1;
 			str = new char[size];
@@ -22,7 +23,7 @@ p2String::p2String(const char* string){
 	}
 }
 
-p2String::p2String(unsigned int scapacity){
+p2String::p2String(uint scapacity){
 	if (scapacity > 0){
 		str = new char[scapacity];
 		capacity = scapacity;
@@ -45,7 +46,7 @@ const char* p2String::c_str()const{
 
 int p2String::GetSize(const char* string)const
 {
-	unsigned int size = 0;
+	uint size = 0;
 
 	if (string != NULL){
 
@@ -67,7 +68,7 @@ bool p2String::operator != (const p2String& string)const{
 }
 
 const p2String& p2String::operator = (const p2String& string){
-	unsigned int size = GetSize(string.str);
+	uint size = GetSize(string.str);
 	if (size > capacity){
 		delete[] str;
 		capacity = size;
@@ -78,7 +79,7 @@ const p2String& p2String::operator = (const p2String& string){
 }
 
 const p2String& p2String::operator += (const p2String& string){
-	unsigned int size = GetSize(string.str);
+	uint size = GetSize(string.str);
 	char* tmp = new char[size + capacity + 1];
 	strcpy_s(tmp, size + capacity + 1, str);
 	delete[] str;

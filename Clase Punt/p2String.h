@@ -1,4 +1,4 @@
-#ifndef __P2STRING_H__
+/*#ifndef __P2STRING_H__
 #define __P2STRING_H__	
 #include "p2Defs.h"
 
@@ -29,4 +29,4 @@ private:
 	uint capacity = 0;
 };
 
-#endif // !__P2STRING_H__
+#endif // !__P2STRING_H__*/

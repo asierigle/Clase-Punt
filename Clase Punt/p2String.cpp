@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "p2String.h"
 
 
@@ -89,4 +89,4 @@ const p2String& p2String::operator += (const p2String& string){
 	return(*this);
 
 
-}
+}*/

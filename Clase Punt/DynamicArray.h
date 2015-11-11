@@ -24,11 +24,11 @@ public:
 		memCapacity += memory;
 		data = new TYPE[memCapacity];
 	}
-
+	//Destructor
 	~DynamicArray(){
 		if (data != NULL)delete[] data;
 	}
-
+	//Methods
 	void PushBack(const TYPE& DynA){ 
 		if (memCapacity < numElements){
 			TYPE* tmp = data;
@@ -36,6 +36,7 @@ public:
 			data = new TYPE[memCapacity];
 			memcpy(data, tmp, numElements* sizeof(TYPE));
 			delete[] tmp;
+			data = tmp;
 		}
 			data[numElements++] = DynA;
 	}
@@ -47,6 +48,57 @@ public:
 		return NULL;
 	}
 	
+	bool PopBack(TYPE& value)
+	{
+		if (num_elements > 0)
+		{
+			value = data[--num_elements];
+			return true;
+		}
+		return false;
+	}
+
+	void ShrinkToFit(){
+		if (memCapacity != numElements){
+			TYPE& tmp = data;
+			memCapacity = numElements;
+			data = new TYPE[memCapacity];
+			memcpy(data, tmp, memCapacity*sizeof(TYPE))
+			delete[] tmp;
+		}
+
+	void Flip(){
+			
+		}
+	void Insert(uint position, const TYPE& dat){
+		numElements++;
+		TYPE* tmp = dat;
+		if (memCapacity < numElements){
+			dat = new TYPE[numElements];
+			memCapacity++;
+			memcpy(dat, tmp, (position)*sizeof(TYPE));
+			for (uint i = numElements; i > position; i--){
+			
+			}
+		}
+	}
+
+
+
+	}
+	//Operators
+	TYPE& operator [](uint position){
+		if (position < numElements){ 
+			return data[position]; 
+		}
+		else{ 
+			return NULL; 
+		}
+	}
+
+
+
+
 	uint Capacity()const{
 		return memCapacity;
 	}
